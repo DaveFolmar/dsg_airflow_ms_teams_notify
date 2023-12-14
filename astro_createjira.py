@@ -14,7 +14,7 @@ output_file = "output.txt"
 
 message = 'Message'
 jobname = 'FolmarTest'
-nodename = 'rhel-cs-p-XXXX'
+nodename = 'rhel-cs-p-XYXX'
 completion_code = '099'
 scheduling_date = '09/23/23'
 cm_time = '09:00'
