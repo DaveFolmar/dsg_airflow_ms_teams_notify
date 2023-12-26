@@ -1,4 +1,4 @@
 url_site = "https://dcsgcloud-sandbox-871.atlassian.net"
-email_login = "srv-ctrlmjira@dcsg.com"
-api_key = "ATATT3xFfGF0kkhFuXOWjkNJbMHaI1Y3BHJHMVw7XerORkZj4-LmsMLjwU6aNjodHCxbfj9BPBWn7Ba3CsEVG542TEnycoAQPLFKg9qRJT_DgAyeoLzjs7BePmFbdMEyty8tu1BuEjERmFG5kE8ZaibB-Zk8QXdGtNJP580FFMPjltC1GGcMvz4=3B24BB75"
+api_username = "srv-astrojira@dcsg.com"
+api_key = "ATATT3xFfGF0tXHPHovQXGGE0qR1yPvvEiMePm3aXtBBGWE8vixy810ChYo1GEDwprZZze5tBGv_kTpWcmGA4eh7us0pvdT5NvLXeD4vbDT4EOcFVV6Uq5tZmkxLA0lW-z_Adzbi_bQb6QPb-TvSQgzNIT6lS9LRUpp-PFbPx6B9AsQJEd2hKq4=2F2E6089"
 

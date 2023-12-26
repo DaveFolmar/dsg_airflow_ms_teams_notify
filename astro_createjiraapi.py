@@ -1,7 +1,7 @@
 from atlassian import Jira
 import argparse, json, sys
 import requests
-import dave_config
+from dave_config import api_key, api_username
 import json
 
 #DSG- Jira Service Management Sandbox URL
@@ -59,12 +59,12 @@ if cm_group:
 
 description = "Control-M Task Failure\nJob Name: " + jobname + "\nHostname: " + nodename + "\nApplication Group: " + cm_application + "\nSub Application: " + cm_applicationGroup + "\nCompletion Code: " + completion_code+ "\nOrder Date: " + scheduling_date + "\nRun Date: " + cm_time + "\n"
 
-# Redirect output to the file
+'''# Redirect output to the file
 with open(output_file, "w") as output:
     # Print the variables to the file
     print("cm_message:", cm_message, file=output)
     print("Description: ", description, file=output)
-    print("Summary: ", summary, file=output)
+    print("Summary: ", summary, file=output)'''
 
 # Create the ticket
 payload = json.dumps({
@@ -125,10 +125,9 @@ payload = json.dumps({
 print(payload)
 
 headers = {
-  'Authorization': 'Basic c3J2LWFzdHJvamlyYUBkY3NnLmNvbTpBVEFUVDN4RmZHRjB0WEhQSG92UVhHR0UwcVIxeVB2dkVpTWVQbTNhWHRCQkdXRTh2aXh5ODEwQ2hZbzFHRUR3cHJaWnplNXRCR3Zfa1RwV2NtR0E0ZWg3dXMwcHZkVDVOdkxYZUQ0dmJEVDRFT2NGVlY2VXE1dFpta3hMQTBsVy16X0FkemJpX2JRYjZRUGItVHZTUWd6TklUNmxTOUxSVXBwLVBGYlB4NkI5QXNRSkVkMmhLcTQ9MkYyRTYwODk=',
-  'Content-Type': 'application/json',
+  'Content-Type': 'application/json'
 }
-response = requests.request("POST", url, headers=headers, data=payload)
+auth=(api_username, api_key)
+response = requests.request("POST", url, headers=headers, data=payload, auth=(api_username, api_key))
 
 print(response.text)
-
